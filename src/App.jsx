@@ -38,10 +38,10 @@ const HomeVite = () => {
 
             </span>
             <span className="linkspan">
-              <p><span className="rosebud link">CONTACT US:</span> ej@devpetrichor.com.ar</p>
+              <p><span className="rosebud">contact us:</span> ej@devpetrichor.com.ar</p>
 
               <span className="email">
-                <p><span className="rosebud link">JOIN</span> our mailing list:</p>
+                <p><span className="rosebud">join</span> our mailing list:</p>
                 <div className="emailinp">
                   <input type="email" onChange={(e) => setEmail(e.target.value)} className="form-control" placeholder="your email"/>
                   <button onClick={() => submit()}  disabled={email === ""}>submit</button>
