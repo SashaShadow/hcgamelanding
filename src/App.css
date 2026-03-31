@@ -1,0 +1,125 @@
+#center {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  place-content: center;
+  place-items: center;
+  flex-grow: 1;
+
+  @media (max-width: 1024px) {
+    padding: 32px 20px 24px;
+    gap: 18px;
+  }
+}
+
+.LogoCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+}
+
+.logo {
+  max-width: 25rem;
+  max-height: 25rem;
+}
+
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+@font-face {
+  font-family: 'Rosebud';
+  src: url('./assets/Rose\ Bud\ Sweet.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CarvedRock';
+  src: url('./assets/Carved\ Rock.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'CarvedRock', sans-serif;
+}
+
+.rosebud {
+  font-family: "Rosebud", sans-serif;
+}
+
+.links {
+  display: grid;
+  grid-auto-flow: row;
+  margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 1rem;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.link:hover {
+  color: rgb(174, 212, 246);
+}
+
+.link a {
+  text-decoration: none;
+  all: unset;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.linkspan {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 0.4rem;
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    max-width: 20rem;
+    max-height: 20rem;
+  }
+
+  .linkspan {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 420px) {
+  .logo {
+    max-width: 17rem;
+    max-height: 17rem;
+  }
+
+  .p {
+    font-size: 85%;
+  }
+
+  .LogoCont {
+    position:fixed;
+    top: 4.5rem;
+  }
+}
+
+
+.emailinp {
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
