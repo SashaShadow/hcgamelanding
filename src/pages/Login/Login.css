@@ -8,7 +8,8 @@
 
 .div-center {
   width: 400px;
-  max-width: 90vw; /* Máximo ancho relativo a la pantalla */
+  max-width: 90vw;
+  /* Máximo ancho relativo a la pantalla */
   height: auto;
   min-height: 350px;
   background-color: #612466b2;
@@ -25,7 +26,7 @@ div.content {
 }
 
 .divin input {
-  color: white !important;
+  color: rgb(0, 0, 0) !important;
   width: 100%;
   padding: 0.5rem;
   font-size: 1rem;
@@ -43,6 +44,7 @@ div.content {
   width: 100%;
   padding: 1rem;
   box-sizing: border-box;
+  color: rgb(209, 201, 201);
 }
 
 .loader {
@@ -58,12 +60,13 @@ div.content {
 
 @keyframes rotation {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
+
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
-} 
+}
 
 .Loading {
   color: #fff;
@@ -86,10 +89,12 @@ div.content {
     padding: 1em 1em;
     min-height: auto;
   }
+
   .divin input {
     font-size: 0.9rem;
     padding: 0.4rem;
   }
+
   .btn {
     width: 100%;
     font-size: 1rem;
