@@ -257,6 +257,8 @@
 .ContNewsTable {
     margin-top: 2rem;
     width: 100%;
+    color: #fff !important;
+    background-color: #133860e0;
 }
 
 .ContNewsTable input {
@@ -269,6 +271,19 @@
 
 .ContNewsTable label {
     width: 100%;
+    color: #fff !important;
+}
+
+.ContNewsTable td {
+    color: #fff !important;
+}
+
+.ContNewsTable th {
+    color: #fff !important;
+}
+
+.ContNewsTable thead {
+    color: #fff !important;
 }
 
 .AdminHeader {

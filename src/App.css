@@ -21,7 +21,7 @@
 }
 
 .logo {
-  width: clamp(17rem, 60vw, 55rem) !important;
+  width: clamp(14rem, 55vw, 55rem) !important;
   height: auto !important;
   cursor: pointer !important;
 }
@@ -66,9 +66,9 @@ body {
   justify-content: center !important;
   align-items: center !important;
   gap: 0.3rem !important;
-  font-size: 1.5rem !important;
+  font-size: 1.3rem !important;
   background-color: rgb(0, 0, 0);
-  padding: 1.2rem;
+  padding: 1rem;
   -webkit-box-shadow: -12px 8px 0px 2px #017cd2;
   box-shadow: -12px 8px 0px 2px #017cd2;
 }

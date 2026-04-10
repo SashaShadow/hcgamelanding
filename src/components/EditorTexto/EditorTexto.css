@@ -1,0 +1,43 @@
+.editor-content .ProseMirror {
+    min-height: 150px;
+    padding: 10px;
+    background-color: white;
+    outline: none;
+    color: black !important;
+}
+
+/* Permitir que la negrita, cursiva, links y listas se vean forzosamente en el editor y la vista previa */
+.editor-content .ProseMirror strong, .editor-content .ProseMirror b, .vista-previa-newsletter strong, .vista-previa-newsletter b {
+    font-weight: 900 !important;
+}
+
+.editor-content .ProseMirror em, .editor-content .ProseMirror i, .vista-previa-newsletter em, .vista-previa-newsletter i {
+    font-style: italic !important;
+}
+
+.editor-content .ProseMirror ul, .vista-previa-newsletter ul {
+    list-style-type: disc !important;
+    padding-left: 20px !important;
+    margin-bottom: 1em;
+}
+
+.editor-content .ProseMirror ol, .vista-previa-newsletter ol {
+    list-style-type: decimal !important;
+    padding-left: 20px !important;
+    margin-bottom: 1em;
+}
+
+.editor-content .ProseMirror a, .vista-previa-newsletter a {
+    color: #007bff !important;
+    text-decoration: underline !important;
+    cursor: pointer;
+}
+
+.editor-content .ProseMirror p, .vista-previa-newsletter p {
+    margin-bottom: 0.5em;
+    color: black !important;
+}
+
+.editor-content {
+    background-color: white;
+}

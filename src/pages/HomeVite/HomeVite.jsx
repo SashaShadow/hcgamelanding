@@ -3,6 +3,7 @@ import { useState } from 'react'
 import headCutterLogo from '../../assets/LOGO.png'
 import headCutterLogo3D from '../../assets/logo3d.png'
 import fondoLogo from '../../assets/fondotexto4k.png'
+import CustomAlert from '../../components/CustomAlert/CustomAlert.jsx'
 
 import { RiInstagramFill } from "react-icons/ri";
 import { FaTwitter } from "react-icons/fa6";
@@ -15,6 +16,7 @@ const HomeVite = () => {
   const [email, setEmail] = useState("")
   const [error, setError] = useState(null)
   const [loader, setLoader] = useState(false)
+  const [alertMsg, setAlertMsg] = useState(null)
 
   const submit = async () => {
     try {
@@ -27,14 +29,15 @@ const HomeVite = () => {
         console.log(crearCorreo.data)
 
         if (`${crearCorreo.data.status_code}`.startsWith(2)) {
-          alert(`${email} successfully added to our mailing list`)
+          setAlertMsg(`E-mail sent! Check your inbox to see if you recived it. Check your spam folder, too!`)
         } else {
-          alert(`${crearCorreo.data.description}`)
+          setAlertMsg(`${crearCorreo.data.description}`)
         }
       } else {
-        alert("check your email format. ex: test@devpetrichor.com.ar")
+        setAlertMsg("Check your email format. Ex: test@devpetrichor.com.ar")
       }
     } catch (err) {
+      setAlertMsg("Something went wrong. Please try again later.")
       console.log(err.toString())
     } finally {
       setLoader(false)
@@ -64,7 +67,7 @@ const HomeVite = () => {
             <span className="linkspan">
               <p><span className="rosebud link"><a href="https://discord.gg/eGyrF3TgY8" target="_blank">JOIN</a></span> our discord</p>
               <p><span className="rosebud link">WISHLIST</span> our game</p>
-
+              <p><span className="rosebud link"><a href="https://drive.google.com/drive/u/1/folders/1V0amhwnIFrects7W8Bagsjzp7-1JV__a" target="_blank">CHECK OUT</a></span> our presskit</p>
             </span>
             <span className="linkspan">
               <p><span className="rosebud">contact us:</span> hello@devpetrichor.com.ar</p>
@@ -99,6 +102,8 @@ const HomeVite = () => {
         </div>
 
       </section>
+
+      {alertMsg && <CustomAlert message={alertMsg} onClose={() => setAlertMsg(null)} />}
     </>
   )
 }

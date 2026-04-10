@@ -4,6 +4,9 @@ import Context from '../../context/SessionContext.jsx';
 import { useNavigate } from 'react-router-dom';
 import './Admin.css';
 import headCutterLogo from '../../assets/LOGO.png'
+import { useEditor, EditorContent } from "@tiptap/react";
+import StarterKit from "@tiptap/starter-kit";
+import EditorTexto from '../../components/EditorTexto/EditorTexto.jsx'
 
 const Admin = () => {
 
@@ -21,6 +24,15 @@ const Admin = () => {
     })
     const [sePuedeCrear, setSePuedeCrear] = useState(false)
     const [loader, setLoader] = useState(false)
+
+    const editor = useEditor({
+        extensions: [StarterKit],
+        content: "<p>Hola</p>",
+        onUpdate: ({ editor }) => {
+            const html = editor.getHTML();
+            setNewsletter({ ...newsletter, cuerpo: html });
+        },
+    });
 
     const { token, logout } = useContext(Context);
     const navigate = useNavigate();
@@ -103,7 +115,12 @@ const Admin = () => {
                 Authorization: `Bearer ${token}`
             }
 
-            const crearfecha = await axios.post(`${back_url}newsletter/`, newsletter, { headers: headers })
+            const payloadCargado = {
+                ...newsletter,
+                cuerpo: `<div style="text-align: left; width: 100%; display: block; font-family: Arial, sans-serif;">${newsletter.cuerpo}</div>`
+            };
+
+            const crearfecha = await axios.post(`${back_url}newsletter/`, payloadCargado, { headers: headers })
             if (crearfecha.data.status_code !== 200) throw new Error("Error al crear el newsletter")
 
             alert("Newsletter creado correctamente")
@@ -142,16 +159,16 @@ const Admin = () => {
                 <div className="ContNewsTable">
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
-                            <label htmlFor="titulo">Titulo del newsletter</label>
-                            <input type="text" className="form-control" id="titulo" name="titulo" value={newsletter.titulo} onChange={handleChange} />
-                        </div>
-                        <div className="form-group">
                             <label htmlFor="asunto">Asunto del mail</label>
                             <input type="text" className="form-control" id="asunto" name="asunto" value={newsletter.asunto} onChange={handleChange} />
                         </div>
                         <div className="form-group">
+                            <label htmlFor="titulo">Titulo del newsletter</label>
+                            <input type="text" className="form-control" id="titulo" name="titulo" value={newsletter.titulo} onChange={handleChange} />
+                        </div>
+                        <div className="form-group">
                             <label htmlFor="cuerpo">Cuerpo del mail</label>
-                            <textarea className="form-control" id="cuerpo" name="cuerpo" value={newsletter.cuerpo} onChange={handleChange}></textarea>
+                            <EditorTexto value={newsletter.cuerpo} onChange={(html) => setNewsletter({ ...newsletter, cuerpo: html })} />
                         </div>
 
                         <button type="submit" className="btn btn-primary" disabled={!sePuedeCrear}>Crear</button>
