@@ -28,7 +28,7 @@
 
 
 .logo:hover {
-  transform: scale(1.1) !important;
+  transform: scale(1.02) !important;
 }
 
 
@@ -48,7 +48,7 @@
 
 body {
   font-family: 'CarvedRock', sans-serif !important;
-  background-image: url('./assets/fondocasi4k.png') !important;
+  background-image: url('./assets/fondocasi4k.jpg') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -67,9 +67,10 @@ body {
   align-items: center !important;
   gap: 0.3rem !important;
   font-size: 1.5rem !important;
-  background-color: rgba(0, 0, 0, 0.429);
-  padding: 0.5rem;
-  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+  padding: 1.2rem;
+  -webkit-box-shadow: -12px 8px 0px 2px #017cd2;
+  box-shadow: -12px 8px 0px 2px #017cd2;
 }
 
 .link {

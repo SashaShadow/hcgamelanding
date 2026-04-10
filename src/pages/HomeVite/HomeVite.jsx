@@ -4,7 +4,7 @@ import headCutterLogo from '../../assets/LOGO.png'
 import headCutterLogo3D from '../../assets/logo3d.png'
 import fondoLogo from '../../assets/fondotexto4k.png'
 
-import { CiInstagram } from "react-icons/ci";
+import { RiInstagramFill } from "react-icons/ri";
 import { FaTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa6";
 import { FaTiktok } from "react-icons/fa6";
@@ -82,7 +82,7 @@ const HomeVite = () => {
           </div>
 
           <div className="socialMediaCont">
-            <CiInstagram onClick={() => window.open("https://www.instagram.com/devpetrichor/", "_blank")} />
+            <RiInstagramFill onClick={() => window.open("https://www.instagram.com/devpetrichor/", "_blank")} />
             <FaTwitter onClick={() => window.open("https://x.com/DevPetrichor", "_blank")} />
             <FaYoutube onClick={() => window.open("https://www.youtube.com/channel/UCg48jY_k6jbHLrDU15xPoVw", "_blank")} />
             <FaTiktok onClick={() => window.open("https://www.tiktok.com/@devpetrichor", "_blank")} />
