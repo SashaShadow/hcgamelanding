@@ -1,0 +1,21 @@
+.socialMediaCont {
+    display: flex;
+    gap: 0.4rem;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: #fff;
+    margin-top: 1rem;
+}
+
+.socialMediaCont svg {
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.socialMediaCont svg:hover {
+    color: #9660d5;
+    transform: scale(1.1);
+}
+
+.socialMediaCont svg:active {
+    transform: scale(0.9);
+}
