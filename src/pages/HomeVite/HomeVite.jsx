@@ -67,7 +67,7 @@ const HomeVite = () => {
 
             </span>
             <span className="linkspan">
-              <p><span className="rosebud">contact us:</span> ej@devpetrichor.com.ar</p>
+              <p><span className="rosebud">contact us:</span> hello@devpetrichor.com.ar</p>
 
               <span className="email">
                 <p><span className="rosebud">join</span> our newsletter:</p>
