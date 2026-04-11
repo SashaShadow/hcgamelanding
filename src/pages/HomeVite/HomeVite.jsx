@@ -29,7 +29,7 @@ const HomeVite = () => {
         console.log(crearCorreo.data)
 
         if (`${crearCorreo.data.status_code}`.startsWith(2)) {
-          setAlertMsg(`E-mail sent! Check your inbox to see if you recived it. Check your spam folder, too!`)
+          setAlertMsg(`E-mail sent! Check your inbox to see if you received it. Check your spam folder, too!`)
         } else {
           setAlertMsg(`${crearCorreo.data.description}`)
         }
