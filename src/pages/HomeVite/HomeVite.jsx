@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useState } from 'react'
-import headCutterLogo from '../../assets/LOGO.png'
 import headCutterLogo3D from '../../assets/logo3d.png'
 import fondoLogo from '../../assets/fondotexto4k.png'
 import CustomAlert from '../../components/CustomAlert/CustomAlert.jsx'
@@ -14,7 +13,6 @@ import './HomeVite.css'
 const HomeVite = () => {
 
   const [email, setEmail] = useState("")
-  const [error, setError] = useState(null)
   const [loader, setLoader] = useState(false)
   const [alertMsg, setAlertMsg] = useState(null)
 

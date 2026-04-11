@@ -21,7 +21,7 @@
 }
 
 .logo {
-  width: clamp(14rem, 55vw, 55rem) !important;
+  width: clamp(17rem, 55vw, 55rem) !important;
   height: auto !important;
   cursor: pointer !important;
 }
@@ -122,6 +122,9 @@ body {
 
   .links {
     font-size: 0.9rem !important;
+    padding: 0.5rem 0.8rem !important;
+    max-width: 90vw !important;
+    gap: 0.1rem !important;
   }
 }
 
