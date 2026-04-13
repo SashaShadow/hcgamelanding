@@ -68,7 +68,7 @@ const HomeVite = () => {
               <p><span className="rosebud link"><a href="https://drive.google.com/drive/u/1/folders/1V0amhwnIFrects7W8Bagsjzp7-1JV__a" target="_blank">CHECK OUT</a></span> our presskit</p>
             </span>
             <span className="linkspan">
-              <p><span className="rosebud">contact us:</span> hello@devpetrichor.com.ar</p>
+              <p><span className="rosebud">contact us:</span> email@devpetrichor.com.ar</p>
 
               <span className="email">
                 <p><span className="rosebud">join</span> our newsletter:</p>
