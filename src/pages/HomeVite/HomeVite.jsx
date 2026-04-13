@@ -65,7 +65,7 @@ const HomeVite = () => {
             <span className="linkspan">
               <p><span className="rosebud link"><a href="https://discord.gg/eGyrF3TgY8" target="_blank">JOIN</a></span> our discord</p>
               <p><span className="rosebud link">WISHLIST</span> our game</p>
-              <p><span className="rosebud link"><a href="https://drive.google.com/drive/u/1/folders/1V0amhwnIFrects7W8Bagsjzp7-1JV__a" target="_blank">CHECK OUT</a></span> our presskit</p>
+              <p><span className="rosebud link"><a href="https://drive.google.com/drive/folders/1wEN73GtBB6l4ZTZzu8VpYaSrzfkrAfF_" target="_blank">CHECK OUT</a></span> our presskit</p>
             </span>
             <span className="linkspan">
               <p><span className="rosebud">contact us:</span> email@devpetrichor.com.ar</p>
