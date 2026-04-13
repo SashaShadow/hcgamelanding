@@ -24,7 +24,6 @@ const HomeVite = () => {
         const payload = { mail: email }
 
         const crearCorreo = await axios.post(`${back_url}mail/`, payload)
-        console.log(crearCorreo.data)
 
         if (`${crearCorreo.data.status_code}`.startsWith(2)) {
           setAlertMsg(`E-mail sent! Check your inbox to see if you received it. Check your spam folder, too!`)
@@ -52,7 +51,7 @@ const HomeVite = () => {
     <>
       <section id="center">
         <div className="LogoCont">
-          <img src={headCutterLogo3D} className="logo"
+          <img src={headCutterLogo3D} className="logo" onClick={() => window.open("https://store.steampowered.com/app/4603230/HEADCUTTER/", "_blank")}
             alt="Headcutter"
             style={{
               backgroundImage: `url(${fondoLogo})`,
@@ -64,7 +63,7 @@ const HomeVite = () => {
           <div className="links">
             <span className="linkspan">
               <p><span className="rosebud link"><a href="https://discord.gg/eGyrF3TgY8" target="_blank">JOIN</a></span> our discord</p>
-              <p><span className="rosebud link">WISHLIST</span> our game</p>
+              <p><span className="rosebud link"><a href="https://store.steampowered.com/app/4603230/HEADCUTTER/" target="_blank">WISHLIST</a></span> our game</p>
               <p><span className="rosebud link"><a href="https://drive.google.com/drive/folders/1wEN73GtBB6l4ZTZzu8VpYaSrzfkrAfF_" target="_blank">CHECK OUT</a></span> our presskit</p>
             </span>
             <span className="linkspan">
