@@ -9,6 +9,7 @@ import { FaTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa6";
 import { FaTiktok } from "react-icons/fa6";
 import './HomeVite.css'
+import logoVid from '../../assets/TitleHD.webm'; // Adjust the path to your file
 
 const HomeVite = () => {
 
@@ -51,7 +52,7 @@ const HomeVite = () => {
     <>
       <section id="center">
         <div className="LogoCont">
-          <img src={headCutterLogo3D} className="logo" onClick={() => window.open("https://store.steampowered.com/app/4603230/HEADCUTTER/", "_blank")}
+          {/* <img src={headCutterLogo3D} className="logo" onClick={() => window.open("https://store.steampowered.com/app/4603230/HEADCUTTER/", "_blank")}
             alt="Headcutter"
             style={{
               backgroundImage: `url(${fondoLogo})`,
@@ -59,12 +60,23 @@ const HomeVite = () => {
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center'
             }}
-          />
+          /> */}
+          <video width="100%" autoPlay
+            loop
+            muted
+            playsInline
+            className="logo"
+            onClick={() => window.open("https://store.steampowered.com/app/4603230/HEADCUTTER/", "_blank")}
+          >
+            <source src={logoVid} type="video/webm" />
+            Your browser does not support the video tag.
+          </video>
           <div className="links">
             <span className="linkspan">
               <p><span className="rosebud link"><a href="https://discord.gg/eGyrF3TgY8" target="_blank">JOIN</a></span> our discord</p>
               <p><span className="rosebud link"><a href="https://store.steampowered.com/app/4603230/HEADCUTTER/" target="_blank">WISHLIST</a></span> our game</p>
-              <p><span className="rosebud link"><a href="https://drive.google.com/drive/folders/1wEN73GtBB6l4ZTZzu8VpYaSrzfkrAfF_" target="_blank">CHECK OUT</a></span> our presskit</p>
+              <p><span className="rosebud link"><a href="https://impress.games/press-kit/devpetrichor/headcutter"target="_blank">CHECK OUT</a></span> our presskit</p>
+              <p><span className="rosebud link"><a href="https://drive.google.com/drive/folders/1wEN73GtBB6l4ZTZzu8VpYaSrzfkrAfF_" target="_blank">GET OUR</a></span> press assets</p>
             </span>
             <span className="linkspan">
               <p><span className="rosebud">contact us:</span> email@devpetrichor.com.ar</p>

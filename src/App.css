@@ -62,7 +62,7 @@ body {
 .links {
   display: grid !important;
   grid-auto-flow: row !important;
-  margin-top: 1rem !important;
+  margin-top: 0.3rem !important;
   justify-content: center !important;
   align-items: center !important;
   gap: 0.3rem !important;
@@ -98,6 +98,14 @@ body {
   justify-content: center !important;
   flex-direction: column !important;
   margin-bottom: 0.4rem !important;
+  margin-top: 0.4rem !important;
+}
+
+
+.emailinp {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 0.2rem !important;
 }
 
 @media (max-width: 1024px) {
@@ -126,11 +134,9 @@ body {
     max-width: 90vw !important;
     gap: 0.1rem !important;
   }
+
+  .emailinp {
+    flex-direction: column !important;
+  }
 }
 
-
-.emailinp {
-  display: flex !important;
-  justify-content: center !important;
-  gap: 0.2rem !important;
-}
